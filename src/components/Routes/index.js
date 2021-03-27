@@ -1,6 +1,8 @@
 import { Route, Switch } from "react-router";
 // Components
 import Map from "../Map";
+import Signup from "../authentication/SignUp";
+import Signin from "../authentication/SignIn";
 
 const Routes = () => {
   const Tokyo = {
@@ -11,6 +13,12 @@ const Routes = () => {
     <Switch>
       <Route>
         <Map isMarkerShown lat={Tokyo.lat} lng={Tokyo.lng} />
+      </Route>
+      <Route exact path="/signup">
+        <Signup />
+      </Route>
+      <Route exact path="/signin">
+        <Signin />
       </Route>
     </Switch>
   );
